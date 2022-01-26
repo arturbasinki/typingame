@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   randomText = 'Neque porro quisquam est qui dolorem ipsum';
   enteredText = '';
-  onInput(event: any) {
-    this.enteredText = event.target.value;
+  onInput(event: Event) {
+    this.enteredText = (event.target as HTMLInputElement).value;
     // console.log(this.enteredText);
   }
   compare(randomLetter: string, enteredLetter: string) {
